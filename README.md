@@ -23,33 +23,48 @@
 
 ## Requisites
 
-- Python3.9+
+- [Python3.8+](https://www.python.org/downloads/)
+- [Docker with docker-compose](https://docs.docker.com/desktop/)
 
 ## Quickstart
 
 On Linux:
 
-```sh
+```bash
 python -m venv env
 source env/bin/activate
 python -m pip install -r requirements.txt
+
+docker-compose up -d
 python src/main.py
 ```
 
 On Windows:
 
-```ps1
+```powershell
 python -m venv env
 .\env\Scripts\activate
 python -m pip install -r requirements.txt
+
+docker-compose up -d
 python src\main.py
 ```
+
+![Example](./doc/example.png)
 
 ## Project Navigation
 
 - doc &rarr; Documentation
 - src &rarr; Source Code
+- src/spiders &rarr; Scripts that crawl websites with [scrapy](https://scrapy.org/)
+- src/splash &rarr; Scripts that use [splash](https://github.com/scrapinghub/splash) to perform complex interactions with websites
 
 ## Contributing
 
 Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) whenever possible.
+
+## Links
+
+- https://docs.scrapy.org/en/latest/intro/tutorial.html
+- https://github.com/scrapy-plugins/scrapy-splash
+- https://splash.readthedocs.io/en/stable/scripting-tutorial.html
